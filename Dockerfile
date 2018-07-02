@@ -1,5 +1,5 @@
-FROM nginx:mainline-alpine
-MAINTAINER Neo Ighodaro <hi@neo.ng>
+FROM nginx:latest
+MAINTAINER Michael Okoh <mjokoh@icloud.com>
 
 ENV php_conf /etc/php7/php.ini
 ENV fpm_conf /etc/php7/php-fpm.d/www.conf
