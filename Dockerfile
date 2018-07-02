@@ -1,4 +1,4 @@
-FROM nginx:latest
+FROM smebberson/alpine-nginx
 MAINTAINER Michael Okoh <mjokoh@icloud.com>
 
 ENV php_conf /etc/php7/php.ini
