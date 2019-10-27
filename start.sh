@@ -13,14 +13,6 @@ if [[ ! -z "${CIROUE_URL}" ]]; then
     sed -i "s#http://127.0.0.1:8000#${CIROUE_URL}#g" /etc/nginx/sites-available/default.conf
 fi
 
-# # RUN KEY GENERATE
-#if [[ ! -z "${GENERATE_KEY}" ]]; then
-#    cd ${WEBROOT}
-#    php artisan key:generate --ansi
-#    cd -
-#fi
-
-#docker run -d -p 4488:80 --name=testapp -e "WEBROOT_PUBLIC=/var/www" -v $PWD:/var/www ciroue/notebook
 # UPDATE COMPOSER PACKAGES ON BUILD.
 ## 💡 THIS MAY MAKE THE BUILD SLOWER BECAUSE IT HAS TO FETCH PACKAGES.
 if [[ ! -z "${COMPOSER_DIRECTORY}" ]] && [[ "${COMPOSER_UPDATE_ON_BUILD}" == "1" ]]; then
