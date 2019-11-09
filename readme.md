@@ -1,3 +1,10 @@
+## Building Instruction
+* Clone this Repository
+* Run `docker build -t ciroue/notebook .` at the root Directory to have the
+`ciroue/notebook` image.
+
+## If you're using this Image as Part of *Ciroue*, Ignore the rest of this Readme.
+
 # Web Server
 
 Nginx & PHP 7 web server.
@@ -8,7 +15,7 @@ Using the Laravel installer you can get up and running with a Laravel applicatio
 
 - Create a new Laravel application `$ laravel new testapp`
 - Change to the applications directory `$ cd testapp`
-- Start the container and attach the application. `$ docker run -d -p 4488:80 --name=testapp -v $PWD:/var/www creativitykills/nginx-php-server`
+- Start the container and attach the application. `$ docker run -d -p 4488:80 --name=testapp -v $PWD:/var/www ciroue/notebook`
 - Visit the Docker container URL like [http://0.0.0.0:4488](http://0.0.0.0:4488). Profit!
 
 ### Args
