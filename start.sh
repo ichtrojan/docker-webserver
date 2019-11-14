@@ -25,6 +25,7 @@ if [[ "${LARAVEL_APP}" == "1" ]]; then
     # RUN LARAVEL MIGRATIONS ON BUILD.
     if [[ "${RUN_LARAVEL_MIGRATIONS_ON_BUILD}" == "1" ]]; then
         cd ${WEBROOT}
+        chown -R www-data:www-data storage/
         php artisan migrate
     fi
 
